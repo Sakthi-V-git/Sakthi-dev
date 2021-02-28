@@ -1,2 +1,0 @@
-# Sakthi-dev
-my-project

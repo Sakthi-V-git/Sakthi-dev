@@ -1,0 +1,18 @@
+<img class="img2" src="assets\tata-nexon.jpeg" alt="Tata-Nexon"><br>
+    <mat-drawer-container  class="example-container" >
+      <mat-drawer  position="end"  [mode]="mode.value">
+      </mat-drawer>
+      <mat-drawer-content >
+        <mat-form-field>
+          <mat-label>Version</mat-label>
+          <mat-select #mode value="side">
+            <mat-option value="side">XE</mat-option>
+            <mat-option value="over">Petrol</mat-option>
+            <mat-option value="push">Diesel</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        <span class="amount">{{money | currency:'INR'}} Lakh</span><br>
+        <span>Avg.Ex-Showroom Price</span><br><br><br>
+      </mat-drawer-content>
+    </mat-drawer-container>

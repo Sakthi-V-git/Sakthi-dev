@@ -1,0 +1,134 @@
+<mat-sidenav-container class="example-container" position="over">
+  <mat-sidenav  #sidenav class="sidenav" position="end">
+
+      <br><h1>Tata Nexon</h1>
+      <p>Provide your contact details for Test Drive</p>
+      <form #myForm="ngForm"  (ngSubmit)="onSubmit(myForm.value)" class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Choose your city</mat-label>
+            <input type="text"
+                   placeholder="Pick one"
+                   aria-label="city"
+                   name="city"
+                   matInput
+                   [(ngModel)]="customer.city"
+                   [formControl]="myControl"
+                   [matAutocomplete]="auto" required>
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option.address.street">
+                {{option.address.street}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Full Name</mat-label>
+            <input type="text"
+                   placeholder="Full Name"
+                   aria-label="city"
+                   name="fullname"
+                   matInput
+                   [(ngModel)]="customer.fullname"
+                   required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+              <mat-label>Contact Number</mat-label>
+              <input type="text"
+                     placeholder="Contact Number"
+                     aria-label="city"
+                     name="number"
+                     matInput
+                     [(ngModel)]="customer.number"
+                     required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input type="text"
+                     placeholder="Email"
+                     aria-label="city"
+                     name="email"
+                     matInput
+                     [(ngModel)]="customer.email"
+                     required>
+            </mat-form-field>
+            <button type="submit" mat-raised-button color="warn" (click)="sidenav.toggle()" class="button" [disabled]="!myForm.valid" >Submit</button>
+        </form>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+<mat-toolbar class="toolbar">
+  <button mat-icon-button class="example-icon brand" aria-label="Example icon-button with menu icon">
+    <span class="material-icons icon">directions_car</span>carwale
+  </button>
+  <a href="">NEWCARS</a>
+  <a href="">USEDCARS</a>
+  <a href="">REVIEWS&NEWS</a>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <span class="material-icons">
+      location_on
+      </span>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <span class="material-icons">
+      translate
+      </span>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <span class="material-icons">
+      account_circle
+      </span>
+  </button>
+</mat-toolbar><hr>
+
+<div class="container">
+  <img src="/assets/ad1.gif" alt="advertisement"><br>
+  <h1>Tata Nexon</h1>
+  <span class="material-icons green">star_rate</span>
+  <span class="material-icons green">star_rate</span>
+  <span class="material-icons green">star_rate</span>
+  <span class="material-icons green">star_rate</span>
+  <span class="material-icons">star_border</span>
+  <span class="review">414 Reviews </span>
+  <span> | </span>
+  <span class="review">Write a Review</span>
+  <mat-toolbar class="toolbar">
+    <a href="" class="bottom-nav">NEXON</a>
+    <a href="" class="bottom-nav">VERSIONS</a>
+    <a href="" class="bottom-nav">IMAGES</a>
+    <a href="" class="bottom-nav">EXPERT REVIEWS</a>
+    <a href="" class="bottom-nav">COLOURS</a>
+    <a href="" class="bottom-nav">MILEAGE</a>
+    <a href="" class="bottom-nav">USED NEXON</a>
+  </mat-toolbar><hr>
+    <app-offers></app-offers>
+    <mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Customer Details
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <table class="mat-elevation-z8" >
+          <thead>
+              <tr>
+                  <th> Name</th>
+                  <th> Number</th>
+                  <th>Email</th>
+                  <th>City</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr >
+                  <th>{{ customer.fullname }}</th>
+                  <td>{{ customer.number}}</td>
+                  <td>{{ customer.email }}</td>
+                  <td>{{ customer.city }}</td>
+              </tr>
+          </tbody>
+      </table>
+      </mat-expansion-panel>
+      </mat-accordion>
+</div>
+<p><button mat-raised-button color="warn" class="offer" (click)="sidenav.toggle()">Get February Offers</button></p>
+</mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,95 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.toolbar{
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+  .brand{
+      padding-right: 200px;
+      font-size: 30px;
+      font-family: cursive;
+      color: rgb(68, 67, 67);
+  }
+
+  .icon{
+      color: rgb(218, 16, 16);
+      
+  }
+
+  a{
+      text-decoration: none;
+      padding-right: 50px;
+      color: grey;
+      font-family: monospace;
+  }
+
+  a:hover{
+      color: green;
+  }
+
+  .container{
+      margin: 10px 200px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+
+  .green{
+      color: rgb(4, 170, 162);
+  }
+
+  .review{
+      padding-left: 10px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: rgb(0, 89, 255);
+  }
+
+  .bottom-nav{
+      padding-right: 20px;
+      font-size: 18px;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .button{
+      margin-top: 50px;
+      margin-left: 150px;
+  }
+
+  .offer{
+      margin-left: 700px;
+  }
+
+  .sidenav{
+      padding-left: 50px;
+  }
+
+  .example-small-box, .example-large-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .example-small-box {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .example-large-box {
+    height: 300px;
+    width: 300px;
+  }
+  
