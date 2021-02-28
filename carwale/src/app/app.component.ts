@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { startWith, debounceTime, distinctUntilChanged, switchMap, map } from 'rxjs/operators';
 import { CityService } from './city.service';
 import { customer } from './customer.model';
-import { CustomerComponent } from './customer/customer.component';
 
 @Component({
   selector: 'app-root',

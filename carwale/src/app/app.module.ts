@@ -12,7 +12,6 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { HttpClientModule } from '@angular/common/http';
-import { CustomerComponent } from './customer/customer.component';
 import { OffersComponent } from './offers/offers.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
@@ -22,7 +21,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerComponent,
     OffersComponent,
   ],
   imports: [
